@@ -126,8 +126,8 @@ class Game {
   }
 
   checkColitions(a, b) {
-    const dx = a.colitionX - b.colitionX - 25;
-    const dy = a.colitionY - b.colitionY - 20;
+    const dx = a.colitionX - b.colitionX - 25 * this.ratio;
+    const dy = a.colitionY - b.colitionY - 20 * this.ratio;
     const distance = Math.sqrt(dx * dx + dy * dy);
     return distance <= a.colitionRadius + b.colitionRadius;
   }
